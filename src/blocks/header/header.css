@@ -1,0 +1,48 @@
+@import url('./__project-name/header__project-name.css');
+@import url('./__pages/header__pages.css');
+@import url('./__item/header__item.css');
+@import url('./__page/header__page.css');
+@import url('./_stat/header_stat.css');
+
+
+
+.header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex; 
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 100px 0;
+    margin: auto;
+    color: #FFFFFF;   
+    height: 80px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1100px) {
+    .header {
+        padding: 25px 60px 0;
+        height: 70px;
+    }
+}
+
+@media (max-width: 780px) {
+    .header {
+        padding: 25px 40px 0;
+        height: 70px;
+    }
+}
+
+@media (max-width: 660px) {
+    .header {
+        padding: 20px 20px 0;
+        height: 60px;
+    }
+}
+
+@media (max-width: 440px) {
+    .header {
+        padding: 16px 15px 0;
+        height: 56px;
+    }
+}

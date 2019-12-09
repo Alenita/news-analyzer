@@ -1,0 +1,23 @@
+
+.site-top {
+    height: 575px;
+    padding: 0;
+    width: 100%;
+    background-image: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .site-top {
+    background-image: url(../../images/bg-ipadmin.png);
+    height: 400px;
+    }
+}
+
+@media (max-width: 440px) {
+    .site-top {
+    background-image: url(../../images/bg-iphone.png);
+    height: 536px;
+    }
+}

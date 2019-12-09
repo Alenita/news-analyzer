@@ -1,0 +1,46 @@
+@import url('./__line/total-stats__line.css');
+@import url('./__main/total-stats__main.css');
+@import url('./__analitics/total-stats__analitics.css');
+@import url('./__title-line/total-stats__title-line.css');
+@import url('./__title/total-stats__title.css');
+@import url('./__week-line/total-stats__week-line.css');
+@import url('./__week/total-stats__week.css');
+@import url('./__week-count/total-stats__week-count.css');
+@import url('./__heading-count/total-stats__heading-count.css');
+
+
+
+.total-stats {
+    padding: 40px 0 80px 104px;
+    align-content: flex-start;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media (max-width: 1100px) {
+    .total-stats {
+    padding: 50px 0 60px 60px;
+    }
+}
+
+
+@media (max-width: 780px) {
+    .total-stats {
+        padding: 32px 0 40px 40px;
+    }
+}
+
+@media (max-width: 660px) {
+    .total-stats {
+        padding: 20px 0 30px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .total-stats {
+        padding: 16px 0 24px 16px;
+    }
+}

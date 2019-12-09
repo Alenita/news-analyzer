@@ -1,0 +1,5 @@
+.diagram__stat-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+}

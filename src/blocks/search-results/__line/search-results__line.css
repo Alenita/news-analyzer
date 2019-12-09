@@ -1,0 +1,22 @@
+.search-results__line {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 64px;
+}
+
+@media (max-width: 768px) {
+    .search-results__line {
+        width: 89%;
+        margin: 0 auto 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-results__line {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+    }
+}

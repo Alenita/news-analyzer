@@ -1,0 +1,11 @@
+.diagram__container {
+    margin-top: 24px;
+    width: 100%;
+    border-top: 1px solid #1A1B22;
+}
+
+@media (max-width: 480px) {
+    .diagram__container {
+        margin-top: 8px;
+    }
+}

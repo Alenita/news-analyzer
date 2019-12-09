@@ -1,0 +1,8 @@
+.header__page.header__page_black {
+    color: #B6BCBF;
+}
+
+.header__page.header__page_black:hover {
+    color: #1A1B22;
+    font-weight: 600;
+}

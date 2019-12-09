@@ -1,2 +1,15 @@
 @import url('../vendor/normalize.css');
-@import url('../vendor/fonts.css');
+@import url('../fonts/fonts.css');
+@import url('../blocks/root/root.css');
+@import url('../blocks/header/header.css');
+@import url('../blocks/site-top/site-top.css');
+@import url('../blocks/link/link.css');
+@import url('../blocks/item/item.css');
+@import url('../blocks/search/search.css');
+@import url('../blocks/main/main.css');
+@import url('../blocks/preloader/preloader.css');
+@import url('../blocks/not-found/not-found.css');
+@import url('../blocks/search-results/search-results.css');
+@import url('../blocks/extra-text/extra-text.css');
+@import url('../blocks/about-author/about-author.css');
+@import url('../blocks/footer/footer.css');

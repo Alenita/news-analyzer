@@ -5,19 +5,25 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
+const CopyWebpackPlugin= require('copy-webpack-plugin');
 
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: { 
+        main: './src/index.js',
+        about: './src/about/about.js',
+        analitics: './src/analitics.js'
+
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
     },
-    devtool: 'source-map',
+   
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
       },
-
+      devtool: 'source-map',
     module: {
         rules: [{ 
             test: /\.js$/, 
@@ -37,12 +43,11 @@ module.exports = {
         {
             test: /\.(gif|png|jpe?g|svg)$/i,//для работы с изображениями
             use: [
-                'file-loader',
+                'file-loader?name=../images/[name].[ext]',
                 {
                 loader: 'image-webpack-loader',
                 options: {
-                    bypassOnDebug: true, // webpack@1.x
-                    disable: true, // webpack@2.x and newer
+                    name: '[name].[ext]'
                         },
                     },
                 ],
@@ -83,9 +88,24 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({ 
             inject: false,
-            template: './src/analitics/analitics.html',
+            template: './src/analitics.html',
             filename: 'analitics.html'
         }),
+
+        new CopyWebpackPlugin([{
+            from: './src/fonts',
+            to: './fonts'
+          },
+          {
+            from: './src/favicon',
+            to: './favicon'
+          },
+          {
+            from: './src/images',
+            to: './images'
+          },
+
+        ]),
         
         new WebpackMd5Hash()
     ]

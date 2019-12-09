@@ -1,0 +1,20 @@
+@import url('./__line/search-results__line.css');
+@import url('./__title/search-results__title.css');
+@import url('./__link/search-results__link.css');
+@import url('./__cards/search-results__cards.css');
+@import url('./__more-cards/search-results__more-cards.css');
+@import url('./__button/search-results__button.css');
+
+
+
+.search-results {
+    padding-top: 80px;
+    width: 100%;
+    background: #F5F6F7;
+}
+
+@media (max-width: 768px) {
+    .search-results {
+        padding-top: 80px;
+    }
+}

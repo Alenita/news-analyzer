@@ -1,0 +1,44 @@
+.diagram__line {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 48px;
+}
+
+@media (max-width: 1100px) {
+    .diagram__line{
+        width: 20%; 
+    }
+}
+
+@media (max-width: 800px) {
+    .diagram__line{
+        width: 32%; 
+    }
+}
+
+@media (max-width: 700px) {
+    .diagram__line{
+        width: 38%; 
+    }
+}
+
+@media (max-width: 540px) {
+    .diagram__line{
+        width: 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .diagram__line{
+        width: 50%; 
+    }
+}
+
+@media (max-width: 320px) {
+    .diagram__line{
+        width: 73%; 
+        margin-top: 16px;
+    }
+}

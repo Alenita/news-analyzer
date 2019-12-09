@@ -1,0 +1,27 @@
+@import url('./cards__list/cards__list.css');
+@import url('./card__item/card__item.css');
+
+.search-results__cards {
+    margin: 0 auto;
+    width: 87%;
+
+}
+
+@media (max-width: 1000px) {
+    .search-results__cards {
+        width: 92%;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-results__cards {
+        width: 89%;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-results__cards {
+        width: 90%;
+    }
+}
+

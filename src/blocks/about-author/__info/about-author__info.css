@@ -1,0 +1,23 @@
+.about-author__info {
+    width: 54%;
+
+}
+
+@media (max-width: 1000px) {
+    .about-author__info {
+        width: 65%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-author__info {
+        width: 62%;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-author__info {
+        width: 100%;
+    }
+}
+

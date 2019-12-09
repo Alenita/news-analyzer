@@ -1,0 +1,46 @@
+@import url(./__title/diagram__title.css);
+@import url(./__line/diagram__line.css);
+@import url(./__column/diagram__column.css);
+@import url(./__date-column/diagram__date-column.css);
+@import url(./__date/diagram__date.css);
+@import url(./__container/diagram__container.css);
+@import url(./__scale/diagram__scale.css);
+@import url(./__score/diagram__score.css);
+@import url(./__stat-container/diagram__stat-container.css);
+@import url(./__days/diagram__days.css);
+@import url(./__statistics/diagram__statistics.css);
+@import url(./__graph/diagram__graph.css);
+@import url(./__day-stat/diagram__day-stat.css);
+
+
+.diagram {
+
+    background: #F5F6F7;
+    padding: 80px 104px 116px;
+    align-content: flex-start;
+}
+
+@media (max-width: 1100px) {
+    .diagram {
+    padding: 50px 60px 60px;
+    }
+}
+
+
+@media (max-width: 780px) {
+    .diagram {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .diagram {
+        padding: 30px 20px 35px;
+    }
+}
+
+@media (max-width: 320px) {
+    .diagram {
+        padding: 24px 16px 32px;
+    }
+}
