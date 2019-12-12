@@ -28,9 +28,16 @@
     border-radius: 50%;
     background: black;
     color: white;
-
-
   }
+
+  .flickity-prev-next-button:hover {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+  }
+
   /* icon color */
   .flickity-button-icon {
     fill: white;

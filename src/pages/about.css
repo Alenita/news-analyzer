@@ -1,5 +1,6 @@
 @import url(../vendor/normalize.css);
 @import url(../fonts/fonts.css);
+@import url(../../node_modules/flickity/css/flickity.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/link/link.css);
 @import url(../blocks/item/item.css);
@@ -12,5 +13,5 @@
 @import url(../blocks/extra-text/extra-text.css);
 @import url(../blocks/techno/techno.css);
 @import url(../blocks/commits/commits.css);
-@import url(../../node_modules/flickity/css/flickity.css);
+
 

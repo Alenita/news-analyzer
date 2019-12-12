@@ -1,11 +1,12 @@
 import "./pages/about.css";
 
-
+import Flickity from 'flickity';
 
 const slider = new Flickity( '.carousel', {
     // Настройки плагина
-    cellAlign: 'left',
+    cellAlign: 'center',
     contain: true,
     freeScroll: true,
-    wrapAround: true
+    wrapAround: true,
+    groupCells: 2
  });
