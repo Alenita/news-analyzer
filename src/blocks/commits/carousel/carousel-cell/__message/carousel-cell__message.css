@@ -1,14 +1,9 @@
-.footer__copyright {
+.carousel-cell__message {
+    margin: 0;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    color: #B6BCBF;
-}
-
-@media (max-width: 600px) {
-    .footer__copyright {
-        margin: 40px 0 22px;
-    }
+    color: #1A1B22;
 }

@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -11,7 +11,7 @@ const CopyWebpackPlugin= require('copy-webpack-plugin');
 module.exports = {
     entry: { 
         main: './src/index.js',
-        about: './src/about/about.js',
+        about: './src/about.js',
         analitics: './src/analitics.js'
 
     },
@@ -41,13 +41,14 @@ module.exports = {
         },
 
         {
-            test: /\.(gif|png|jpe?g|svg)$/i,//для работы с изображениями
+            test: /\.(gif|png|jpe?g|svg|ico)$/i,//для работы с изображениями
             use: [
-                'file-loader?name=../images/[name].[ext]',
+                'file-loader?name=./images/[name].[ext]',
                 {
                 loader: 'image-webpack-loader',
                 options: {
-                    name: '[name].[ext]'
+                    name: '[name].[ext]',
+                    esModule: false,
                         },
                     },
                 ],
@@ -57,7 +58,7 @@ module.exports = {
             test: /\.(eot|ttf|woff|woff2)$/, // для работы со шрифтами
             use: [
                     {
-                        loader: 'file-loader?name=./vendor/fonts/[name].[ext]'
+                        loader: 'file-loader?name=./fonts/[name].[ext]'
                     }
                 ]
             },
@@ -83,7 +84,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({ 
             inject: false,
-            template: './src/about/about.html',
+            template: './src/about.html',
             filename: 'about.html'
         }),
         new HtmlWebpackPlugin({ 
@@ -97,14 +98,13 @@ module.exports = {
             to: './fonts'
           },
           {
-            from: './src/favicon',
-            to: './favicon'
-          },
-          {
             from: './src/images',
             to: './images'
           },
-
+          {
+            from: './src/vendor',
+            to: './vendor'
+          },
         ]),
         
         new WebpackMd5Hash()

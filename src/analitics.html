@@ -8,7 +8,7 @@
         <meta name="keywords" content="HTML5, CSS, native JS, JS modules, WebPack">
         <meta name="author" content="Gorshkova Alena">
         <title>About project</title>
-        <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="<%=require('./images/favicon.ico').default%>" type="image/ico">
         <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analitics.css %>">
 </head>
 <body>
@@ -71,7 +71,7 @@
                                 <li class="item diagram__day-stat">24, сб</li>
                                 <li class="item diagram__day-stat">25, вс</li>
                             </ul>
-                            <ul class="diagram__statistics">
+                            <div class="diagram__statistics">
                                 <div class="diagram__graph diagram__graph_1">15</div>
                                 <div class="diagram__graph diagram__graph_2">18</div>
                                 <div class="diagram__graph diagram__graph_3">11</div>
@@ -79,16 +79,17 @@
                                 <div class="diagram__graph diagram__graph_5">45</div>
                                 <div class="diagram__graph diagram__graph_6">73</div>
                                 <div class="diagram__graph diagram__graph_7">34</div>
-                            </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="diagram__scale">
-                        <span class="diagram__score">0</span>
-                        <span class="diagram__score">25</span>
-                        <span class="diagram__score">50</span>
-                        <span class="diagram__score">75</span>
-                        <span class="diagram__score diagram__score_last">100</span>
-                    </div>
+
+                        <div class="diagram__scale">
+                            <span class="diagram__score">0</span>
+                            <span class="diagram__score">25</span>
+                            <span class="diagram__score">50</span>
+                            <span class="diagram__score">75</span>
+                            <span class="diagram__score diagram__score_last">100</span>
+                        </div>
+                    </div>                  
                 </div>
             </main>
             <footer class="footer">
@@ -119,6 +120,7 @@
                     </ul>
                     </div>
                 </footer>
+            </div>
     <script src="<%= htmlWebpackPlugin.files.chunks.analitics.entry %>"></script>
 </body>
 </html>

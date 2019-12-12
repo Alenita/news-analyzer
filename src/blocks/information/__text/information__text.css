@@ -1,0 +1,15 @@
+.information__text {
+    width: 67%;
+}
+
+@media (max-width: 1200px) {
+    .information__text {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .information__text {
+        width: 100%;
+    }
+}

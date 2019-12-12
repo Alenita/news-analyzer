@@ -1,0 +1,23 @@
+.header__page_black.header__page_current-black {
+    color: #1A1B22;
+    cursor: default;
+    border-bottom: 3px solid #1A1B22;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+    .header__page_black.header__page_current-black {
+        padding-bottom: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__page_black.header__page_current-black {
+        padding-bottom: 15px;
+    }
+}

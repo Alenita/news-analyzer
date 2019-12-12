@@ -1,0 +1,6 @@
+.carousel-cell__info {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 16px 0;
+} 
