@@ -5,3 +5,10 @@
     width: 85%;
     margin: 0 auto 64px;
 }
+
+@media (max-width: 800px) {
+    .commits__line {
+        width: 90%;
+        margin-bottom: 32px;
+    }
+}

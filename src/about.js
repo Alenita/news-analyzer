@@ -8,5 +8,5 @@ const slider = new Flickity( '.carousel', {
     contain: true,
     freeScroll: true,
     wrapAround: true,
-    groupCells: 2
+    groupCells: '90%',
  });

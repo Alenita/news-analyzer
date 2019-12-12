@@ -1,11 +1,10 @@
-
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
-const CopyWebpackPlugin= require('copy-webpack-plugin');
+
 
 
 module.exports = {
@@ -47,8 +46,8 @@ module.exports = {
                 {
                 loader: 'image-webpack-loader',
                 options: {
-                    name: '[name].[ext]',
-                    esModule: false,
+                    bypassOnDebug: true, 
+                    disable: true, 
                         },
                     },
                 ],
@@ -93,20 +92,7 @@ module.exports = {
             filename: 'analitics.html'
         }),
 
-        new CopyWebpackPlugin([{
-            from: './src/fonts',
-            to: './fonts'
-          },
-          {
-            from: './src/images',
-            to: './images'
-          },
-          {
-            from: './src/vendor',
-            to: './vendor'
-          },
-        ]),
-        
+      
         new WebpackMd5Hash()
     ]
 }

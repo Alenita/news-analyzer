@@ -18,27 +18,19 @@
     box-sizing: border-box;
 }
 
-.flickity-button {
-    background: #333;
+@media (max-width: 850px) {
+  .carousel-cell {
+    width: 336px;
+    height: 242px;
+    margin-right: 8px;
   }
+}
 
-.flickity-prev-next-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: black;
-    color: white;
+@media (max-width: 400px) {
+  .carousel-cell {
+    width: 90%;
+    height: 264px;
+    margin: 0 8px;
+    padding: 16px;
   }
-
-  .flickity-prev-next-button:hover {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: black;
-    color: white;
-  }
-
-  /* icon color */
-  .flickity-button-icon {
-    fill: white;
-  }
+}

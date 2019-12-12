@@ -1,0 +1,9 @@
+.commits__arrow {
+    margin-left: 10px;
+}
+
+@media (max-width: 400px) {
+    .commits__arrow {
+        display: none;
+    }
+}

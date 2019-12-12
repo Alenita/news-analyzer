@@ -1,6 +1,6 @@
 {
   "name": "news-analyzer",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "diploma project",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Alenita/news-analyzer/issues"
   },
-  "homepage": "https://github.com/Alenita/news-analyzer#readme",
+  "homepage": "https://Alenita.github.io/news-analyzer",
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
@@ -25,11 +25,11 @@
     "autoprefixer": "^9.7.2",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
-    "copy-webpack-plugin": "^5.0.5",
     "core-js": "3.4.1",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "file-loader": "^5.0.2",
+    "gh-pages": "~2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.8.0",

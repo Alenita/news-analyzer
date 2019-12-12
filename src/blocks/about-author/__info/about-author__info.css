@@ -15,7 +15,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .about-author__info {
         width: 100%;
     }
