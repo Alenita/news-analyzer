@@ -1,0 +1,47 @@
+@import url('./__image/card__image.css');
+@import url('./__column/card__column.css');
+@import url('./__title/card__title.css');
+@import url('./__text/card__text.css');
+@import url('./__source/card__source.css');
+@import url('./__description/card__description.css');
+
+
+.card__item {
+    height: 576px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    cursor: url(../../../../images/Pointer.svg), pointer;
+    padding-bottom: 20px;
+
+}
+
+@media (max-width: 1000px) {
+    .card__item {
+        height: 500px;
+        padding-bottom: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card__item {
+        height: 420px;
+    }
+}
+ 
+@media (max-width: 600px) {
+    .card__item {
+        height: 390px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card__item {
+        height: 446px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+

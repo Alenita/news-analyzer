@@ -1,0 +1,26 @@
+.diagram__scale {
+    margin: 16px 0 0 8.5%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 800px) {
+    .diagram__scale {
+        width: 95%;
+        margin-left: 11%;
+    }
+}
+
+@media (max-width: 700px) {
+    .diagram__scale {
+        width: 90%;
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 480px) {
+    .diagram__scale {
+        display: none;
+    }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Поиск новостей">
+    <meta name="keywords" content="HTML5, CSS, native JS, JS modules, WebPack">
+    <meta name="author" content="Gorshkova Alena">
+    <title>NewsAnalyzer</title>
+    <link rel="shortcut icon" href="<%=require('./images/favicon.ico').default%>" type="image/ico">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+    <div class="root">
+        <div class="site-top">
+            <header class="header">
+                <p class="header__project-name">NewsAnalyzer</p>
+                <ul class ="header__pages">
+                    <li class="item header__item">
+                        <p class="header__page header__page_current">Главная</p>
+                    </li>
+                    <li class="item header__item">
+                        <a href="./about.html" class="link header__page">О проекте</a>
+                    </li>
+                </ul>    
+            </header>
+            
+            <div class="search">
+                <h1 class="search__title">Что в мире творится?</h1>
+                <h3 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h3>
+                <form class="search__form" name = "search">
+                        <input required type="search" name="form-field" placeholder="Введите тему новости" class="search__input">
+                        <input type="submit" name="form-button" value="Искать" class="search__submit">
+                </form>
+            </div>
+        </div>
+        <main class = "main">
+            <div class="preloader">
+
+                    <i class="preloader__circle"></i>
+                    <p class="extra-text preloader__message">Идет поиск новостей...</p>
+
+            </div>
+
+            <div class="not-found">
+                <svg width="96" height="96" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="43" cy="43" r="36.5" stroke="#D1D2D6"/><path d="M69 69l19.5 19.5M58.328 55.96c-3.667-4.262-9.1-6.96-15.164-6.96-6.063 0-11.496 2.698-15.164 6.96" stroke="#D1D2D6"/><circle cx="55.5" cy="33.5" r="1.5" fill="#D1D2D6"/><circle cx="30.5" cy="33.5" r="1.5" fill="#D1D2D6"/></svg>
+                <h2 class="not-found__title">Ничего не найдено</h2>
+                <p class="extra-text">К сожалению по вашему запросу ничего не найдено.</p>
+            </div>
+
+            <div class="search-results">
+                <div class="search-results__line">
+                   <h2 class="search-results__title">Результаты поиска</h2>
+                   <a class ="link search-results__link" href = "./analitics.html" target="blank">
+                        Посмотреть аналитику
+                        <svg width="9" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.586 7L.293 12.293l1.414 1.414L8.414 7 1.707.293.293 1.707 5.586 7z" fill="#1A1B22"/></svg>
+                   </a>
+                </div>
+                <div class="search-results__cards">
+                    <ul class="cards__list">
+                        <li class="item card__item">
+                            <a class="link" href="https://lenta.ru/" target="_blank">
+                                <img class ="card__image" src="<%=require('./images/card-1.png').default%>" alt="Изображение к карточке 1">
+                                <div class="card__column">
+                                    <div class="card__description">
+                                        <time datetime="2019-08-02" class="extra-text">2 августа, 2019</time>
+                                        <h3 class="card__title">Национальное достояние – парки</h3>
+                                        <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                                    </div>
+                                    <p class="card__source">Лента.ру</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item card__item">
+                            <a class="link" href="https://meduza.io/" target="_blank">
+                                <img class ="card__image" src="<%=require('./images/card-2.png').default%>" alt="Изображение к карточке 3">
+                                <div class="card__column">
+                                    <div class="card__description">
+                                        <time datetime="2019-08-02" class="extra-text">2 августа, 2019</time>
+                                        <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
+                                        <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного 
+                                                из местных чудес природы.</p>
+                                    </div>
+                                    <p class="card__source">Медуза</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item card__item">
+                            <a class="link" href="https://ria.ru/" target="_blank">
+                                <img class ="card__image" src="<%=require('./images/card-3.png').default%>" alt="Изображение к карточке 3">
+                                <div class="card__column">
+                                    <div class="card__description">
+                                        <time datetime="2019-08-02" class="extra-text">2 августа, 2019</time>
+                                        <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                                        <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                                    </div>
+                                    <p class="card__source">Риа</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="cards__list">
+                        <li class="item card__item">
+                            <a class="link" href="https://zen.yandex.ru/" target="_blank">
+                                <img class ="card__image" src="<%=require('./images/card-4.png').default%>" alt="Изображение к карточке 4">
+                                <div class="card__column">
+                                    <div class="card__description">
+                                        <time datetime="2019-08-02" class="extra-text">2 августа, 2019</time>
+                                        <h3 class="card__title">Национальное достояние – парки</h3>
+                                        <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                                    </div>
+                                    <p class="card__source">Дзен</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item card__item">
+                            <a class="link" href="https://www.afisha.ru/" target="_blank">
+                                <img class ="card__image" src="<%=require('./images/card-5.png').default%>" alt="Изображение к карточке 5">
+                                <div class="card__column">
+                                    <div class="card__description">
+                                        <time datetime="2019-08-02" class="extra-text">2 августа, 2019</time>
+                                        <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
+                                        <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного 
+                                                из местных чудес природы.</p>
+                                    </div>
+                                    <p class="card__source">Афиша</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item card__item">
+                            <a class="link" href="https://zona.media/" target="_blank">
+                                <img class ="card__image" src="<%=require('./images/card-6.png').default%>" alt="Изображение к карточке 6">
+                                <div class="card__column">
+                                    <div class="card__description">
+                                        <time datetime="2019-08-02" class="extra-text">2 августа, 2019</time>
+                                        <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                                        <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                                    </div>
+                                    <p class="card__source">Медиазона</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-results__more-cards">
+                        <button type="button" class="search-results__button">Показать еще</button>
+                </div>  
+            </div>
+
+            <div class="about-author">
+                <div class="about-author__container">
+                    <picture>
+                        <source srcset="<%=require('./images/avatar-ipad.png').default%>" media="(max-width: 1000px)">
+                        <source srcset="<%=require('./images/avatar-iphone.png').default%>" media="(max-width: 500px)">
+                        <img class="about-author__photo" alt="Здесь не подгрузилось чьё-то фото" src="<%=require('./images/avatar.png').default%>">
+                    </picture>
+                    
+                    <div class="about-author__info">
+                        <h2 class="about-author__title">Об авторе</h2>
+                        <p class="extra-text about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+                            <br>
+                            <br>
+                                Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__copyright">© 2019  Supersite</p>
+                <ul class="footer__links-list">
+                    <li class="item footer__link-item"> 
+                        <a href="index.html" class="link footer__link">Главная</a>
+                    </li>
+                    <li class="item footer__link-item">
+                        <a href="./about.html" class="link footer__link">О проекте</a>
+                    </li>
+                    <li class="item footer__link-item">
+                        <a href="https://praktikum.yandex.ru/profile/web-developer/" target="_blank" class="link footer__link">Яндекс.Практикум</a>
+                    </li>
+                </ul>
+                <ul class="footer__icons">
+                    <li class="item">
+                        <a href="https://github.com/Alenita" class="link" target="_blank">
+                            <svg width="22" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 .895C5.417.895.895 5.423.895 11c0 4.466 2.897 8.25 6.91 9.59.503.093.689-.217.689-.49 0-.242-.007-.874-.013-1.718-2.81.608-3.405-1.352-3.405-1.352-.46-1.167-1.123-1.477-1.123-1.477-.918-.626.068-.614.068-.614 1.011.075 1.55 1.042 1.55 1.042.9 1.545 2.364 1.098 2.941.838.093-.652.354-1.098.64-1.352-2.246-.255-4.604-1.123-4.604-4.994 0-1.104.391-2.004 1.042-2.711-.105-.254-.452-1.284.1-2.674 0 0 .85-.273 2.779 1.036a9.806 9.806 0 012.53-.341 9.843 9.843 0 012.532.341c1.929-1.309 2.779-1.036 2.779-1.036.552 1.39.205 2.42.1 2.674.644.707 1.035 1.607 1.035 2.71 0 3.884-2.363 4.734-4.615 4.988.36.31.688.93.688 1.874 0 1.352-.012 2.438-.012 2.773 0 .273.18.583.695.483 4.013-1.34 6.904-5.123 6.904-9.584C21.105 5.423 16.583.895 11 .895z" fill="#191717"/></svg>
+                        </a>
+                    </li>
+                    <li class="item">
+                    <a href="https://www.facebook.com/" class="link" target="_blank">
+                            <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z" fill="#000"/></svg>
+                    </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

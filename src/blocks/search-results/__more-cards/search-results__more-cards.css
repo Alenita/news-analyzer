@@ -1,0 +1,16 @@
+.search-results__more-cards {
+    padding: 60px 0 80px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .search-results__more-cards {
+        padding: 15px 0 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .search-results__more-cards {
+        padding: 8px 0 40px;
+    }
+}

@@ -1,0 +1,11 @@
+@import url('./__container/about-author__container.css');
+@import url('./__info/about-author__info.css');
+@import url('./__title/about-author__title.css');
+@import url('./__text/about-author__text.css');
+
+.about-author {
+    background: #FFFFFF;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+}

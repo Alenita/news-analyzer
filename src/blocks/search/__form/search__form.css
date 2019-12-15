@@ -1,0 +1,23 @@
+.search__form {
+    width: 100%; 
+    margin-top: 64px; 
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .search__form {
+        margin-top: 24px; 
+    }
+}
+
+@media (max-width: 440px) {
+    .search__form {
+        margin-top: 44px; 
+    }
+}
+
+@media (max-width: 320px) {
+    .search__form {
+        margin-top: 64px; 
+    }
+}

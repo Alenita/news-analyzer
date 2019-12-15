@@ -1,0 +1,16 @@
+.techno__container {
+    width: 77%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    padding:0;
+
+}
+
+@media (max-width: 880px) {
+    .techno__container {
+        width: 100%;
+        flex-direction: column;
+    }
+}

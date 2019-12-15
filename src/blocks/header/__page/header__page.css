@@ -1,0 +1,23 @@
+@import url(./_current/header__page_current.css);
+@import url(./_black/header__page_black.css);
+@import url(./_current/header__page_current-black.css);
+
+.header__page {
+    color: #B6BCBF;
+    font-style: normal;
+    font-weight: 600;
+    cursor: url('../../../images/Pointer.svg'), pointer;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.header__page:hover {
+    color: #FFFFFF;
+}
+
+@media (max-width: 440px) {
+    .header__page {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

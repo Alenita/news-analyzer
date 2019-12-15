@@ -1,0 +1,13 @@
+@import url(./_last/diagram__score_last.css);
+
+.diagram__score {
+    width: 22.5%;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+}

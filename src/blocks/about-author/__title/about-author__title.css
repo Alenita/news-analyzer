@@ -1,0 +1,20 @@
+.about-author__title {
+    font-family: 'RobotoSlabRegular', 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    margin: 50px 0 20px;
+}
+
+@media (max-width: 1000px) {
+    .about-author__title {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-author__title {
+        margin-top: 24px;
+    }
+}

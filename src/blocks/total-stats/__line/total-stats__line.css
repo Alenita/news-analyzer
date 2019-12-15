@@ -1,0 +1,10 @@
+.total-stats__line {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 500px) {
+    .total-stats__line {
+        display: none;
+    }
+}

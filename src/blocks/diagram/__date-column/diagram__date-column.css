@@ -1,0 +1,8 @@
+.diagram__date-column {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+}

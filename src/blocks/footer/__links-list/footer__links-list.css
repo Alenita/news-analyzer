@@ -1,0 +1,33 @@
+.footer__links-list {
+    display: flex;
+    width: 34%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1200px) {
+    .footer__links-list {
+    width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__links-list {
+        width: 52%;
+    }
+}
+
+@media (max-width: 660px) {
+    .footer__links-list {
+        width: 57%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__links-list {
+        flex-direction: column;
+        width: 30%;
+        height: 124px;
+    }
+}

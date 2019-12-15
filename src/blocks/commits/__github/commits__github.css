@@ -1,0 +1,32 @@
+.commits__github {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+}
+
+@media (max-width: 768px) {
+    .commits__github {
+        display: flex;
+        flex-direction: column;
+        height: 68px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 400px) {
+    .commits__github {
+        width: 288px;
+        height: 56px;
+        position: absolute;
+        border-radius: 80px;
+        border: 1px solid #1A1B22;
+        bottom: 32px;
+        left: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+}
