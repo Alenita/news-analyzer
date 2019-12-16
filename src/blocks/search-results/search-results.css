@@ -2,6 +2,14 @@
 @import url('./__title/search-results__title.css');
 @import url('./__link/search-results__link.css');
 @import url('./__cards/search-results__cards.css');
+@import url('./__list/search-results__list.css');
+@import url('./__item/search-results__item.css');
+@import url('./__image/search-results__image.css');
+@import url('./__column/search-results__column.css');
+@import url('./__card-title/search-results__card-title.css');
+@import url('./__text/search-results__text.css');
+@import url('./__source/search-results__source.css');
+@import url('./__description/search-results__description.css');
 @import url('./__more-cards/search-results__more-cards.css');
 @import url('./__button/search-results__button.css');
 

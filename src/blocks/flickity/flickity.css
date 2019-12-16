@@ -24,7 +24,7 @@
   }
   
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     .flickity-prev-next-button {
         display: none;
     }

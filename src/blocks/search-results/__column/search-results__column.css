@@ -1,4 +1,4 @@
-.card__column {
+.search-results__column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -9,25 +9,25 @@
 }
 
 @media (max-width: 1000px) {
-    .card__column {
+    .search-results__column {
         height: 260px;
     }
 }
 
 @media (max-width: 768px) {
-    .card__column {
+    .search-results__column {
         height: 238px;
     }
 }
 
 @media (max-width: 600px) {
-    .card__column {
+    .search-results__column {
         width: 95%;
     }
 }
 
 @media (max-width: 500px) {
-    .card__column {
+    .search-results__column {
         width: 89%;
     }
 }

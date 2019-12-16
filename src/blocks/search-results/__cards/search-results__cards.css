@@ -1,10 +1,6 @@
-@import url('./cards__list/cards__list.css');
-@import url('./card__item/card__item.css');
-
 .search-results__cards {
     margin: 0 auto;
     width: 87%;
-
 }
 
 @media (max-width: 1000px) {
