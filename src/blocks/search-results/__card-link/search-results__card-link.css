@@ -1,0 +1,4 @@
+.search-results__card-link {
+    text-decoration: none;
+    cursor: url(../../../images/Pointer.svg), pointer;
+}

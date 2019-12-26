@@ -4,7 +4,8 @@
     background: #FFFFFF;
     cursor: url(../../../images/Pointer.svg), pointer;
     padding-bottom: 20px;
-
+    list-style: none;
+    
 }
 
 @media (max-width: 1000px) {

@@ -20,6 +20,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .search-results__column {
+        height: 200px;
+    }
+}
+
 @media (max-width: 600px) {
     .search-results__column {
         width: 95%;
@@ -29,5 +35,6 @@
 @media (max-width: 500px) {
     .search-results__column {
         width: 89%;
+        height: 170px;
     }
 }

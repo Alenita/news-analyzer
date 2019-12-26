@@ -4,8 +4,13 @@
     font-weight: normal;
     font-size: 26px;
     line-height: 30px;
+    max-height: 3.5em;
     color: #1A1B22;
     margin: 12px 0 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 @media (max-width: 1000px) {
@@ -21,6 +26,7 @@
         font-size: 22px;
         line-height: 20px;
         margin: 10px 0 10px;
+        max-height: 3.7em;
     }
 }
 
@@ -36,6 +42,6 @@
     .search-results__card-title {
         font-size: 22px;
         line-height: 26px;
-        margin: 16px 0 10px;
+        margin: 10px 0 10px;
     }
 }

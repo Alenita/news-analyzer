@@ -3,13 +3,19 @@
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 16px;
+    grid-gap: 16px;
 
 }
 
 @media (max-width: 768px) {
     .search-results__list {
-        grid-column-gap: 8px;
+        grid-gap: 8px;
+    }
+}
+
+@media (max-width: 750px) {
+    .search-results__list {
+        grid-template-columns: 1fr 1fr;
     }
 }
 

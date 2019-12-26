@@ -12,3 +12,7 @@
     align-content: center;
     display: none;
 }
+
+.preloader_visible {
+    display: block;
+}
