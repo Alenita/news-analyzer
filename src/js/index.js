@@ -15,10 +15,8 @@ const searchBlock = document.querySelector('.search-results');
 const newsapi = new NewsApi(BASE_URL, LAN, NEWS_PARAMETERS);
 const createCard = (...args ) => new NewsCard (...args);
 const addButton = document.querySelector('.search-results__more-cards');
-
-
-
-
+//проверка на перезагрузку страницы
+let flag = 0;
 
 
 function deleteCards() {
@@ -54,13 +52,14 @@ function handleSearch(event) {
     searchBlock.classList.add('search-results_visible');
     renderPreloader(true);
     searchSubmit.setAttribute('disabled', true);
-
+    flag = 1;
 
     if (searchInput.validity.valid) {
         newsapi.getCards(searchInput.value)  
         
         .then((result) => {
             checkResults(result.articles);
+            new NewsCardList (resultList, result.articles, createCard).render();  
             transferData(searchInput.value, result);
         })  
 
@@ -89,9 +88,8 @@ function checkResults(result) {
         notFound.classList.remove('not-found_visible');
         searchBlock.classList.add('search-results_visible');
         addButton.classList.add('search-results__more-cards_visible');
-        new NewsCardList (resultList, result, createCard).render();        
+             
     } 
-
 }
 
 function transferData(word, data) {
@@ -100,6 +98,14 @@ function transferData(word, data) {
     localStorage.setItem('info', apiInfo);
     localStorage.setItem('findingWord', word);
 }
+
+if (!flag && localStorage.getItem('info') !== null) {
+    searchInput.value = localStorage.getItem('findingWord');
+    const cardsInfo = JSON.parse(localStorage.getItem('info'));
+    searchBlock.classList.add('search-results_visible');
+    checkResults(cardsInfo.articles);
+    new NewsCardList (resultList, cardsInfo.articles, createCard).render();
+};
 
 searchForm.addEventListener('submit', (event) => handleSearch(event));
 //searchForm.addEventListener('input', validateInput(searchInput));

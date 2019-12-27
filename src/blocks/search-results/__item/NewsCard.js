@@ -20,6 +20,12 @@ export default class NewsCard {
         cardImage.classList.add('search-results__image');
         cardImage.setAttribute('alt','Не удалось загрузить фотографию');
         cardImage.src = `${image}`;
+        
+        //картинка-заглушка
+        function errorImage() {
+            cardImage.src = 'https://dummyimage.com/600x400/cf2dcf/000000&text=Image+not+found';
+          }
+        cardImage.addEventListener('error', errorImage);
 
     
         const infoColumn = document.createElement('div');

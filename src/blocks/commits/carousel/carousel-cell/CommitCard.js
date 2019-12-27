@@ -42,7 +42,6 @@ export default class CommitCard {
         infoColumn.appendChild(cellColumn);
         cellColumn.appendChild(commiterName);
         cellColumn.appendChild(commiterEmail);
-        descriptionBlock.appendChild(cardTitle);
         card.appendChild(text);
         return card;
     }

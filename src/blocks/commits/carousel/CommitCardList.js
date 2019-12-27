@@ -5,11 +5,20 @@ export default class CommitCardList {
         this.callback = callback;
 
         this.renderCards();
+
+        this.slider = new Flickity( this.list, {
+            // Настройки плагина
+            cellAlign: 'center',
+            contain: true,
+            freeScroll: true,
+            wrapAround: true,
+            groupCells: '90%',
+         });
     }
 
     addCards(...args) {
-        const { cardElement } = this.card(...args);
-        this.list.appendChild(cardElement);
+        const { cardElement } = this.callback(...args);
+        this.list.append(cardElement);
       }
 
 

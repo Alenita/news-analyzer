@@ -9,7 +9,15 @@ export default class NewsCardList {
         this.lastCard = 0;
         this.card = callback;
 
+        
         addButton.onclick = () =>  this.render();
+    }
+
+    checkBalance() {
+        if (this.lastCard >= this.data.length) {
+            addButton.classList.remove('search-results__more-cards_visible');
+            }
+        return;
     }
 
     addCards(...args) {
@@ -19,15 +27,17 @@ export default class NewsCardList {
 
     render() {
         const articles = this.data;
-        for (let i = this.lastCard; i < this.lastCard + this.cardPortion; i++) {
+        for (let i = this.lastCard; i < Math.min(this.lastCard + this.cardPortion, articles.length); i++) {
             const article = articles[i];
-            this.addCards(article.url,
-                article.urlToImage,
-                article.publishedAt,
-                article.title,
-                article.description,
-                article.source.name);
+            this.addCards(
+                    article.url,
+                    article.urlToImage,
+                    article.publishedAt,
+                    article.title, 
+                    article.description,
+                    article.source.name );
         }
-        this.lastCard = this.lastCard + 3; 
+        this.lastCard = this.lastCard + this.cardPortion; 
+        this.checkBalance();
     }
 }

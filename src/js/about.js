@@ -8,7 +8,6 @@ import { GITHUB_URL, OWNER, REPO } from './constants/constants.js';
 
 const githubApi = new GithubApi (GITHUB_URL, OWNER, REPO);
 const createCard = (...args ) => new CommitCard (...args);
-const commitList = document.querySelector('.carousel');
 
 const slider = new Flickity( '.carousel', {
     // Настройки плагина
@@ -22,7 +21,7 @@ const slider = new Flickity( '.carousel', {
  githubApi.getCommits()
     .then((result) => {
         console.log(result);
-        new CommitCardList (commitList, result, createCard).renderCards();
+        new CommitCardList (slider, result, createCard).renderCards();
     })
 
     .catch((err) => {

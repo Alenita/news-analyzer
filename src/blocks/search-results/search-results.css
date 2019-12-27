@@ -16,7 +16,7 @@
 
 
 .search-results {
-    padding-top: 80px;
+    padding: 80px 0;
     width: 100%;
     background: #F5F6F7;
     display: none;
