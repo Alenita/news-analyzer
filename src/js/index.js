@@ -12,9 +12,11 @@ const notFound = document.querySelector('.not-found');
 const preloader = document.querySelector('.preloader');
 const resultList = document.querySelector('.search-results__list');
 const searchBlock = document.querySelector('.search-results');
+const addButton = document.querySelector('.search-results__more-cards');
+const serverError = document.querySelector('.server-error');
+
 const newsapi = new NewsApi(BASE_URL, LAN, NEWS_PARAMETERS);
 const createCard = (...args ) => new NewsCard (...args);
-const addButton = document.querySelector('.search-results__more-cards');
 //проверка на перезагрузку страницы
 let flag = 0;
 
@@ -25,15 +27,13 @@ function deleteCards() {
       }
 }
 
-
-
-function validateInput(input) {
-    if (input.value === "") {
-        input.setCustomValidity('Нужно ввести ключевое слово');
-        
+function validateInput() {
+    if (searchInput.value === "") {
+        searchInput.setCustomValidity('Нужно ввести ключевое слово');
+        return
         } else {
-            input.setCustomValidity(' ');
-           
+            searchInput.setCustomValidity('');
+            return
          } 
     };
 
@@ -46,6 +46,7 @@ function renderPreloader (isLoading) {
 }
 
 function handleSearch(event) {
+    validateInput(searchInput);
     localStorage.clear();
     deleteCards();
     event.preventDefault();
@@ -106,9 +107,9 @@ if (!flag && localStorage.getItem('info') !== null) {
     checkResults(cardsInfo.articles);
     new NewsCardList (resultList, cardsInfo.articles, createCard).render();
 };
-
+searchInput.addEventListener('input', validateInput);
 searchForm.addEventListener('submit', (event) => handleSearch(event));
-//searchForm.addEventListener('input', validateInput(searchInput));
+
 
 
 

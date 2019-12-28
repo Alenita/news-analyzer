@@ -11,5 +11,4 @@ export const GITHUB_URL = 'https://api.github.com/repos';
 export const OWNER = 'Alenita';
 export const REPO = 'news-analyzer';
 
-export const STAT_MONTH = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
 

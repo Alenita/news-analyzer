@@ -1,0 +1,19 @@
+.server-error {
+        width: 100%;
+        background: #F5F6F7;
+        padding: 86px 0 80px;
+        box-sizing: border-box;
+        display: none;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: #B6BCBF;
+        display: none;
+    }
+
+    .server-error_visible {
+        display: block;
+    }
