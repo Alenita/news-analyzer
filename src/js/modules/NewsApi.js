@@ -15,9 +15,6 @@ export default class NewsApi {
         
             .then(res => res.ok ? Promise.resolve(res.json()) : Promise.reject(`Ошибка: ${res.status}`))
 
-            .catch(err => {
-                console.log(err);
-            });
     }
 }
 

@@ -5,15 +5,6 @@ export default class CommitCardList {
         this.callback = callback;
 
         this.renderCards();
-
-        this.slider = new Flickity( this.list, {
-            // Настройки плагина
-            cellAlign: 'center',
-            contain: true,
-            freeScroll: true,
-            wrapAround: true,
-            groupCells: '90%',
-         });
     }
 
     addCards(...args) {
@@ -23,13 +14,13 @@ export default class CommitCardList {
 
 
     renderCards() {
-        for (let i = 0; i < this.result.length; i++) {
-            const cardData = this.result[i];
+        this.result.forEach((item) => {
+            const cardData = item;
             this.addCards(cardData.commit.author.date,
                 cardData.author.avatar_url,
                 cardData.commit.committer.name,
                 cardData.commit.committer.email, 
                 cardData.commit.message)
-        }
+        })
     }
 }

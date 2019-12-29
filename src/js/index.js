@@ -53,6 +53,7 @@ function handleSearch(event) {
     searchBlock.classList.add('search-results_visible');
     renderPreloader(true);
     searchSubmit.setAttribute('disabled', true);
+    searchInput.setAttribute('disabled', true);
     flag = 1;
 
     if (searchInput.validity.valid) {
@@ -71,6 +72,7 @@ function handleSearch(event) {
 
         .finally(() =>{
             searchSubmit.removeAttribute('disabled');
+            searchInput.removeAttribute('disabled');
             renderPreloader(false);
         })   
     }  else {
@@ -108,7 +110,7 @@ if (!flag && localStorage.getItem('info') !== null) {
     new NewsCardList (resultList, cardsInfo.articles, createCard).render();
 };
 searchInput.addEventListener('input', validateInput);
-searchForm.addEventListener('submit', (event) => handleSearch(event));
+searchForm.addEventListener('submit', handleSearch);
 
 
 

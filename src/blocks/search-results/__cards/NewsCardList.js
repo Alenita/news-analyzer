@@ -40,4 +40,5 @@ export default class NewsCardList {
         this.lastCard = this.lastCard + this.cardPortion; 
         this.checkBalance();
     }
+
 }
