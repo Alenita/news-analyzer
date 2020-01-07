@@ -17,23 +17,23 @@ const serverError = document.querySelector('.server-error');
 
 const newsapi = new NewsApi(BASE_URL, LAN, NEWS_PARAMETERS);
 const createCard = (...args ) => new NewsCard (...args);
-//проверка на перезагрузку страницы
-let flag = 0;
+const newsList = new NewsCardList (resultList, createCard);
 
 
-function deleteCards() {
+
+/*function deleteCards() {
     while (resultList.firstChild) {
         resultList.removeChild(resultList.firstChild);
       }
-}
+}*/
 
 function validateInput() {
     if (searchInput.value === "") {
         searchInput.setCustomValidity('Нужно ввести ключевое слово');
-        return
+        return false;
         } else {
             searchInput.setCustomValidity('');
-            return
+            return true;
          } 
     };
 
@@ -45,23 +45,24 @@ function renderPreloader (isLoading) {
     }
 }
 
-function handleSearch(event) {
-    validateInput(searchInput);
+function handleSearch() {
+    
     localStorage.clear();
-    deleteCards();
+    //deleteCards();
+    newsList.deleteCards();
     event.preventDefault();
     searchBlock.classList.add('search-results_visible');
     renderPreloader(true);
     searchSubmit.setAttribute('disabled', true);
     searchInput.setAttribute('disabled', true);
-    flag = 1;
-
-    if (searchInput.validity.valid) {
+    
+    if (validateInput()) {
         newsapi.getCards(searchInput.value)  
         
         .then((result) => {
             checkResults(result.articles);
-            new NewsCardList (resultList, result.articles, createCard).render();  
+            newsList.render(result.articles);
+            //new NewsCardList (resultList, result.articles, createCard).render();  
             transferData(searchInput.value, result);
         })  
 
@@ -102,16 +103,16 @@ function transferData(word, data) {
     localStorage.setItem('findingWord', word);
 }
 
-if (!flag && localStorage.getItem('info') !== null) {
+if (localStorage.getItem('info') !== null) {
     searchInput.value = localStorage.getItem('findingWord');
     const cardsInfo = JSON.parse(localStorage.getItem('info'));
     searchBlock.classList.add('search-results_visible');
     checkResults(cardsInfo.articles);
-    new NewsCardList (resultList, cardsInfo.articles, createCard).render();
+    newsList.render(cardsInfo.articles);
+    //new NewsCardList (resultList, cardsInfo.articles, createCard).render();
 };
 searchInput.addEventListener('input', validateInput);
 searchForm.addEventListener('submit', handleSearch);
 
 
-
-
+ 

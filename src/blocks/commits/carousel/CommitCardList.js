@@ -7,7 +7,7 @@ export default class CommitCardList {
         this.renderCards();
     }
 
-    addCards(...args) {
+    _addCards(...args) {
         const { cardElement } = this.callback(...args);
         this.list.append(cardElement);
       }
@@ -16,7 +16,7 @@ export default class CommitCardList {
     renderCards() {
         this.result.forEach((item) => {
             const cardData = item;
-            this.addCards(cardData.commit.author.date,
+            this._addCards(cardData.commit.author.date,
                 cardData.author.avatar_url,
                 cardData.commit.committer.name,
                 cardData.commit.committer.email, 

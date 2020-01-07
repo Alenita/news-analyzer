@@ -11,9 +11,5 @@ export default class GithubApi {
     getCommits() {
         return fetch (`${this.url}/${this.owner}/${this.repo}/commits`)
             .then(res => res.ok ? Promise.resolve(res.json()) : Promise.reject(`Ошибка: ${res.status}`))
-
-            .catch(err => {
-                console.log(err);
-            });
     }
 }
