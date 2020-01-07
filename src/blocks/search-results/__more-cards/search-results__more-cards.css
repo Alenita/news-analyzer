@@ -1,6 +1,11 @@
 .search-results__more-cards {
-    padding: 60px 0 80px;
+    padding: 60px 0 0;
     text-align: center;
+    display: none;
+}
+
+.search-results__more-cards_visible {
+    display: block;
 }
 
 @media (max-width: 768px) {

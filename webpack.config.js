@@ -9,14 +9,14 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry: { 
-        main: './src/index.js',
-        about: './src/about.js',
-        analitics: './src/analitics.js'
+        main: './src/js/index.js',
+        about: './src/js/about.js',
+        analitics: './src/js/analitics.js'
 
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: './scripts/[name].[chunkhash].js'
     },
    
     devServer: {
@@ -92,7 +92,6 @@ module.exports = {
             filename: 'analitics.html'
         }),
 
-      
         new WebpackMd5Hash()
     ]
 }

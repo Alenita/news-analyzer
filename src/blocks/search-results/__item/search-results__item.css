@@ -1,0 +1,40 @@
+.search-results__item {
+    height: 576px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    cursor: url(../../../images/Pointer.svg), pointer;
+    padding-bottom: 20px;
+    list-style: none;
+    
+}
+
+@media (max-width: 1000px) {
+    .search-results__item {
+        height: 500px;
+        padding-bottom: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-results__item {
+        height: 420px;
+    }
+}
+ 
+@media (max-width: 600px) {
+    .search-results__item {
+        height: 390px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .search-results__item {
+        height: 446px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+
