@@ -1,15 +1,16 @@
 
 .idea
 .vscode
+.sublime
 
-/node_modules
-/dist
+dist/
 
-*.log
+.log
+node_modules/
 
 Thumbs.db
 Desktop.ini
-.DS_Store*
+DS_Store
 ehthumbs.db
 
 
