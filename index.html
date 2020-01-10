@@ -9,7 +9,7 @@
     <meta name="author" content="Gorshkova Alena">
     <title>NewsAnalyzer</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="style.e75e176e82bcfe0d18ef.css">
+    <link rel="stylesheet" href="styles/main.2ebbe6f22efee99ad346.css">
 </head>
 <body>
     <div class="root">
@@ -29,13 +29,14 @@
             <div class="search">
                 <h1 class="search__title">Что в мире творится?</h1>
                 <h3 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h3>
-                <form novalidate class="search__form" name = "search">
+                <form class="search__form" name = "search">
                         <input required type="search" name="field" placeholder="Введите тему новости" class="search__input">
                         <button type="submit" class="search__submit"> Искать</button>
                 </form>
             </div>
         </div>
         <main class = "main">
+            
             <div class="preloader">
 
                     <i class="preloader__circle"></i>
@@ -44,9 +45,16 @@
             </div>
 
             <div class="not-found">
-                <svg class="not-found__picture" width="96" height="96" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="43" cy="43" r="36.5" stroke="#D1D2D6"/><path d="M69 69l19.5 19.5M58.328 55.96c-3.667-4.262-9.1-6.96-15.164-6.96-6.063 0-11.496 2.698-15.164 6.96" stroke="#D1D2D6"/><circle cx="55.5" cy="33.5" r="1.5" fill="#D1D2D6"/><circle cx="30.5" cy="33.5" r="1.5" fill="#D1D2D6"/></svg>
-                <h2 class="not-found__title">Ничего не найдено</h2>
-                <p class="extra-text">К сожалению по вашему запросу ничего не найдено.</p>
+
+                <div class="not-found__no-results">
+                    <svg class="not-found__picture" width="96" height="96" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="43" cy="43" r="36.5" stroke="#D1D2D6"/><path d="M69 69l19.5 19.5M58.328 55.96c-3.667-4.262-9.1-6.96-15.164-6.96-6.063 0-11.496 2.698-15.164 6.96" stroke="#D1D2D6"/><circle cx="55.5" cy="33.5" r="1.5" fill="#D1D2D6"/><circle cx="30.5" cy="33.5" r="1.5" fill="#D1D2D6"/></svg>
+                    <h2 class="not-found__title">Ничего не найдено</h2>
+                    <p class="extra-text">К сожалению по вашему запросу ничего не найдено.</p>
+                </div>
+
+                <div class="not-found__server-error">
+                    <p class="extra-text">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.</p>
+                </div>
             </div>
 
             <div class="search-results">
@@ -78,10 +86,9 @@
                     
                     <div class="about-author__info">
                         <h2 class="about-author__title">Об авторе</h2>
-                        <p class="extra-text about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
-                            <br>
-                            <br>
-                                Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                        <p class="extra-text about-author__text">
+                                Меня зовут Горшкова Алёна и по образованию я инженер в сфере техносферной безопасности, а в мечтах - разработчик. 
+                                <br>С июня 2019г. прошла курс фронтенд-разработки Яндекс.Практикума и в этой итоговой работе были применены изученные технологии: HTML, CSS, JS, GIT и Webpack.</p>
                     </div>
                 </div>
             </div>
@@ -115,6 +122,6 @@
             </div>
         </footer>
     </div>
-    <script src="./scripts/main.11d5dec0a40055b8769e.js"></script>
+    <script src="./scripts/main.45067b2d1bc7da45c843.js"></script>
 </body>
 </html>
