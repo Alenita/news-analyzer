@@ -5,6 +5,7 @@ export const NEWS_PARAMETERS = 'sortBy=popularity&pageSize=100&apiKey=fdcf2a49f0
 //в список карточек
 export const CARD_PORTION = 3;
 //даты
+export const MS_IN_DAY = 24*60*60*1000;
 export const MONTH_ARR = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
 //для GithubApi
 export const GITHUB_URL = 'https://api.github.com/repos';

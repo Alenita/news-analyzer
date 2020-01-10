@@ -1,33 +1,23 @@
-import { CARD_PORTION} from '../../../js/constants/constants.js';
+import { CARD_PORTION} from '../../js/constants/constants.js';
 const addButton = document.querySelector('.search-results__more-cards');
 
-export default class NewsCardList {
-    constructor(list, callback) {
+export default class SearchResults {
+    constructor(list) {
         this.list = list;
         this.cardPortion = CARD_PORTION;
         this.lastCard = 0;
-        this.card = callback;
-
-        
-        //addButton.onclick = () =>  this.render();
     }
 
-    _checkBalance(data) {
+    _checkBalance(data, card) {
         if (this.lastCard < data.length) {
             addButton.classList.add('search-results__more-cards_visible');
-            addButton.onclick = () =>  this.render(data);
-            
+            addButton.onclick = () =>  this.render(data, card);
             }
         else {
             addButton.classList.remove('search-results__more-cards_visible');
-            //addButton.removeEventListener('click', this.render);
         };
     }
 
-    _addCards(...args) {
-        const { cardElement } = this.card(...args);
-        this.list.appendChild(cardElement);
-      }
 
     deleteCards() {
         while (this.list.firstChild) {
@@ -35,20 +25,20 @@ export default class NewsCardList {
           }
     }
 
-    render(data) {
+    render(data, card) {
         const articles = data;
         for (let i = this.lastCard; i < Math.min(this.lastCard + this.cardPortion, articles.length); i++) {
             const article = articles[i];
-            this._addCards(
+            this.list.appendChild(card.createCard(
                     article.url,
                     article.urlToImage,
                     article.publishedAt,
                     article.title, 
                     article.description,
-                    article.source.name );
+                    article.source.name ));
         }
         this.lastCard = this.lastCard + this.cardPortion; 
-        this._checkBalance(data);
+        this._checkBalance(data, card);
     }
 
 }

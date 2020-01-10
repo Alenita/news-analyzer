@@ -1,5 +1,5 @@
-import "../pages/analitics.css";
-
+import '../pages/analitics.css';
+import { MS_IN_DAY } from './constants/constants.js';
 
 const data = JSON.parse(localStorage.getItem('info'));
 const keyWord =  localStorage.getItem('findingWord');
@@ -14,7 +14,7 @@ const daysAgo = 6;
 searchPhrase.textContent = '«' + localStorage.getItem('findingWord') + '»';
 weekCount.textContent = data.totalResults;
 titleCount.textContent = countPhrase(keyWord, data.articles);
-diagramMonth.textContent = showMonth();
+diagramMonth.textContent = '(' + showMonth() + ')';
 
 function showMonth() {
     const month = new Date(data.articles[0].publishedAt.slice(0, 10));
@@ -23,7 +23,7 @@ function showMonth() {
 
 function countPhrase(key, articles) {
     let count = 0;
-    articles.forEach(function (item) {
+    articles.forEach((item) => {
         item.title = item.title.toLowerCase();
         key = key.toLowerCase();
         if(item.title.includes(key)) {
@@ -53,8 +53,8 @@ function mentionsPerDay() {
 function dates() {
     const dateObj = [];
     for (let i = daysAgo; i >= 0; i--) {
-        const day = new Date(new Date().getTime()-i*24*60*60*1000).toLocaleDateString('ru', { day: 'numeric', });
-        const date = new Date(new Date().getTime()-i*24*60*60*1000).toLocaleDateString('ru', { weekday: 'short' });
+        const day = new Date(new Date().getTime()-i*MS_IN_DAY).toLocaleDateString('ru', { day: 'numeric', });
+        const date = new Date(new Date().getTime()-i*MS_IN_DAY).toLocaleDateString('ru', { weekday: 'short' });
         const format =  day + ', ' + date; 
         dateObj.push(format);
     }
@@ -62,9 +62,9 @@ function dates() {
 }
 
 function renderDates(array) {
-    for (let i = 0; i < array.length; i++ ) {
-     diagramDate[i].textContent = array[i];
-    }
+    array.forEach((date, index) =>{
+     diagramDate[index].textContent = date;
+    })
 }
 
 function renderGraph(obj){
