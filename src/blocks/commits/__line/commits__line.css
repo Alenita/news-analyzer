@@ -3,12 +3,12 @@
     align-items: center;
     justify-content: space-between;
     width: 85%;
-    margin: 0 auto 64px;
+    margin: 0 auto 40px;
 }
 
 @media (max-width: 800px) {
     .commits__line {
         width: 90%;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
     }
 }

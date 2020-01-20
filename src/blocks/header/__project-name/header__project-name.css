@@ -1,4 +1,4 @@
-@import url(._black/header__project-name_black.css);
+@import url('./_black/header__project-name_black.css');
 
 .header__project-name {
     font-family: 'RobotoSlabRegular', Arial, Helvetica, sans-serif;

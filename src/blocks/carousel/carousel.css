@@ -1,0 +1,12 @@
+@import url(./__cell/carousel__cell.css);
+@import url(./__date/carousel__date.css);
+@import url(./__info/carousel__info.css);
+@import url(./__photo/carousel__photo.css);
+@import url(./__column/carousel__column.css);
+@import url(./__name/carousel__name.css);
+@import url(./__e-mail/carousel__e-mail.css);
+@import url(./__message/carousel__message.css);
+
+.carousel {
+    width: 100%;
+}

@@ -1,4 +1,4 @@
-.carousel-cell__column {
+.carousel__column {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

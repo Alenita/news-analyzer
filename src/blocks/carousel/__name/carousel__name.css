@@ -1,4 +1,4 @@
-.carousel-cell__name {
+.carousel__name {
     font-family: 'RobotoSlabRegular', 'Times New Roman', Times, serif;
     font-style: normal;
     font-weight: normal;
@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 400px) {
-    .carousel-cell__name {
+    .carousel__name {
         font-size: 20px;
         line-height: 30px;
     }

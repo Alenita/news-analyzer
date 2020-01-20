@@ -1,7 +1,7 @@
 @import url(./__line/commits__line.css);
 @import url(./__github/commits__github.css);
 @import url(./__arrow/commits__arrow.css);
-@import url(./carousel/carousel.css);
+/*@import url(./carousel/carousel.css);*/
 
 .commits {
     width: 100%;

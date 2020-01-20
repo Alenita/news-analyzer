@@ -1,6 +1,6 @@
 @import url(./_current/header__page_current.css);
 @import url(./_black/header__page_black.css);
-@import url(./_current/header__page_current-black.css);
+@import url(./_current-black/header__page_current-black.css);
 
 .header__page {
     color: #B6BCBF;
