@@ -7,15 +7,16 @@
     max-height: 7em;
     color: #1A1B22;
     margin: 0;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .search-results__text {
-        height: 4em;
+        height: 3.8em;
         line-height: 20px;
         -webkit-line-clamp: 3;
     }
