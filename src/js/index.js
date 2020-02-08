@@ -60,6 +60,7 @@ function handleSearch() {
             console.log(er);
             searchBlock.classList.remove('search-results_visible');
             serverError.classList.add('not-found__server-error_visible');
+            notFound.classList.remove('not-found__no-results_visible');
         })
 
         .finally(() =>{
@@ -78,7 +79,8 @@ function checkResults(result) {
     if (result.length == 0) {
         localStorage.clear();
         notFound.classList.add('not-found__no-results_visible');
-        searchBlock.classList.remove('search -results_visible');
+        serverError.classList.remove('not-found__server-error_visible');
+        searchBlock.classList.remove('search-results_visible');
     } else {
         notFound.classList.remove('not-found_visible');
         searchBlock.classList.add('search-results_visible');

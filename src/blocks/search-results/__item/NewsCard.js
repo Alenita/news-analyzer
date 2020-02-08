@@ -1,11 +1,6 @@
 import dateFormat from '../../../js/utils/dateFormat.js';
 
 export default class NewsCard {
-    /*constructor(...args) {
-
-        this.cardElement = this.createCard(...args);
-    }*/
-
 
     createCard(link, image, date, title, description, source ) {
         const card = document.createElement('li');

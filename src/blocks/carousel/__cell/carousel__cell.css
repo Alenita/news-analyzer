@@ -1,0 +1,28 @@
+.carousel__cell {
+    cursor: url(../../../images/Pointer.svg), pointer;
+    padding: 24px;
+    width: 400px;
+    height: 288px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    counter-increment: carousel-cell;
+    margin-right: 16px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 850px) {
+  .carousel__cell {
+    width: 336px;
+    height: 242px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel__cell {
+    width: 90%;
+    height: 264px;
+    margin: 0 8px;
+    padding: 16px;
+  }
+}
